@@ -1,0 +1,20 @@
+@media (min-width: 768px){
+  .term{
+    width: 750px;
+  }
+}
+@media (min-width: 1024px){
+  .term{
+    width: 1000px;
+  }
+}
+@media (min-width: 1440px){
+  .term{
+    width: 1400px;
+  }
+}
+@media (max-width: 768px){
+  .term{
+    width: 400px;
+  }
+}
