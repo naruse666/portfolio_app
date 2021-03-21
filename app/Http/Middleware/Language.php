@@ -15,7 +15,7 @@ class Language
      */
     public function handle($request, Closure $next)
     {
-        if(!array_intersect(['en', 'ja', 'ja-jp'], $request->getLanguages())){
+        if(!array_intersect(['ja', 'ja-jp', 'en'], $request->getLanguages())){
             abort(402, 'we are supported English and Japanese');
         }
 
