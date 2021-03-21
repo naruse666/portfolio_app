@@ -1,5 +1,6 @@
 # Portfolio Application
-Thank you for watching this repository ! it's so honor.
+Thank you for watching this repository ! 
+it's so honor.
 
 this is my qiita.
 if you don't mind please feel free follow me.
