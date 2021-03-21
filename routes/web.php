@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::group(['middleware' => 'lang_check'], function(){
+
   Auth::routes();
   
   Route::group(['middleware' => ['auth']], function(){
@@ -66,4 +66,3 @@ Route::group(['middleware' => 'lang_check'], function(){
       Route::delete('chat/delete/{id}', 'ChatController@delete')->name('chat.delete');
     }); 
   });
-});
