@@ -45,15 +45,13 @@ class UsersController extends Controller
     }
 
     public function update(Request $request, $id){
-        $request->validate([
-            'name' => ['required', 'max:255'],
-            'description' => ['required', 'string', 'max:255'],
-            ]);
-            
         $user = User::findOrFail($id);
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'max:255',
+            ]);
         $user->name = $request->name;
         $user->description = $request->description;
-        
         $user->save();
         return redirect()->route('users.show', ['id' => $id]);
     }

@@ -33,10 +33,10 @@ class MuttersController extends Controller
     }
 
     public function update(Request $request, $id){
+        $mutter = Mutter::findOrFail($id);
         $request->validate([
             'mutter' => 'required|max:255'
         ]);
-        $mutter = Mutter::findOrFail($id);
         $mutter->mutter = $request->mutter;
         $mutter->save();
         return redirect()->route('mutters.index');
