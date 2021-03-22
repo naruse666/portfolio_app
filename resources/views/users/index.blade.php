@@ -36,11 +36,7 @@
             @if($user->description == null)
             自己紹介がありません。
             @else
-              @if(strlen($user->description) <= 20)
-                {{ $user->description }}
-              @else
-                {{ substr($user->description, 0, 20) }} ...
-              @endif
+              {{ $user->description }}
             @endif
           </div>
         </div>
