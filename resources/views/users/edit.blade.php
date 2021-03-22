@@ -17,10 +17,6 @@
       </div>
       {!! Form::submit('更新', ['class' => 'btn btn-primary btn-block']) !!}
     {!! Form::close() !!}
-    @if (session('s3url'))
-      <h1>いまアップロードしたファイル</h1>
-      <img src="{{ session('s3url') }}">
-    @endif
   </div>
 </div>
 @endsection
