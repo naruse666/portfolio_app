@@ -90,11 +90,7 @@
                 @if($following->description == null)
                   自己紹介がありません。
                 @else
-                  @if(strlen($following->description) <= 20)
-                    {{ $following->description }}
-                  @else
-                    {{ substr($following->description, 0, 20) }} ...
-                  @endif
+                    {!! nl2br(e($following->description)) !!}
                 @endif
               </div>
             </div>
@@ -111,11 +107,7 @@
                 @if($follower->description == null)
                   自己紹介がありません。
                 @else
-                  @if(strlen($follower->description) <= 20)
-                    {{ $follower->description }}
-                  @else
-                    {{ substr($follower->description, 0, 20) }} ...
-                  @endif
+                  {!! nl2br(e($following->description)) !!}
                 @endif
               </div>
             </div>
