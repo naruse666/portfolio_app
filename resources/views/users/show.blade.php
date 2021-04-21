@@ -107,7 +107,7 @@
                 @if($follower->description == null)
                   自己紹介がありません。
                 @else
-                  {!! nl2br(e($following->description)) !!}
+                  {!! nl2br(e($follower->description)) !!}
                 @endif
               </div>
             </div>
